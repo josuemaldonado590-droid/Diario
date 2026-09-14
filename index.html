@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="theme-color" content="#211710">
+
+    <title>Querida Abi...</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         FONDO
+    ====================================================== -->
+
+    <div class="fondo">
+
+        <div class="luz luz-1"></div>
+        <div class="luz luz-2"></div>
+        <div class="grano"></div>
+
+    </div>
+
+
+    <!-- =====================================================
+         BOTÓN DE MÚSICA
+    ====================================================== -->
+
+    <button
+        id="musicButton"
+        class="music-button"
+        type="button"
+        aria-label="Activar música">
+
+        🎵
+
+    </button>
+
+
+    <!-- =====================================================
+         AUDIO
+    ====================================================== -->
+
+    <audio id="musica" loop preload="auto">
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
+
+    <main id="intro" class="intro">
+
+        <div class="intro-content">
+
+            <p class="small-text">
+                Hay historias que merecen guardarse...
+            </p>
+
+            <h1>
+                Nuestro diario
+            </h1>
+
+            <div class="ornamento">
+                ✦ ───────── ✦
+            </div>
+
+            <p class="intro-description">
+                Una pequeña colección de recuerdos,
+                momentos y sentimientos que quiero
+                guardar contigo.
+            </p>
+
+
+            <!-- LIBRO CERRADO -->
+
+            <div class="closed-book-container">
+
+                <div class="closed-book">
+
+                    <div class="book-spine"></div>
+
+                    <div class="book-cover">
+
+                        <div class="cover-border">
+
+                            <div class="cover-symbol">
+                                ❦
+                            </div>
+
+                            <div class="cover-title">
+                                Querida Abi...
+                            </div>
+
+                            <div class="cover-subtitle">
+                                Nuestra historia
+                            </div>
+
+                            <div class="cover-line"></div>
+
+                            <div class="cover-date">
+                                2026
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="abrirBtn"
+                class="open-button"
+                type="button">
+
+                <span>✦</span>
+                Abrir nuestro diario
+                <span>✦</span>
+
+            </button>
+
+
+            <p class="hint">
+                Toca el botón para comenzar
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         DIARIO
+    ====================================================== -->
+
+    <section
+        id="diario"
+        class="diary-screen oculto">
+
+        <div class="book-area">
+
+            <!-- SOMBRA DEL LIBRO -->
+
+            <div class="book-shadow"></div>
+
+
+            <!-- LIBRO -->
+
+            <div
+                id="book"
+                class="book">
+
+                <!-- =================================================
+                     PORTADA QUE SE ABRE
+                ================================================== -->
+
+                <div
+                    id="bookCover"
+                    class="book-opening-cover">
+
+                    <div class="cover-inner">
+
+                        <div class="cover-inner-decoration">
+                            ❦
+                        </div>
+
+                        <h2>
+                            Querida Abi...
+                        </h2>
+
+                        <p>
+                            Nuestra historia
+                        </p>
+
+                        <div class="cover-inner-line"></div>
+
+                        <small>
+                            Abriendo una pequeña parte
+                            de lo que hemos vivido.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     PÁGINA IZQUIERDA
+                ================================================== -->
+
+                <article class="paper page-left">
+
+                    <div class="page-holes"></div>
+
+                    <div class="paper-content">
+
+                        <div class="page-number" id="leftNumber">
+                            01
+                        </div>
+
+                        <div class="page-title-small">
+                            Querida Abi...
+                        </div>
+
+                        <div class="page-ornament">
+                            ❦
+                        </div>
+
+                        <h2 id="leftTitle">
+                            El comienzo
+                        </h2>
+
+                        <div class="page-line"></div>
+
+                        <div
+                            id="leftText"
+                            class="page-text">
+                        </div>
+
+                        <div class="page-footer">
+                            <span>J & A</span>
+                            <span>♡</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     PÁGINA DERECHA
+                ================================================== -->
+
+                <article class="paper page-right">
+
+                    <div class="paper-content">
+
+                        <div class="page-number" id="rightNumber">
+                            02
+                        </div>
+
+                        <div class="page-date" id="rightDate">
+                            2024
+                        </div>
+
+                        <h2 id="rightTitle">
+                            Dos personas
+                        </h2>
+
+                        <div class="page-ornament">
+                            ✦
+                        </div>
+
+                        <div
+                            id="rightText"
+                            class="page-text">
+                        </div>
+
+                        <div class="page-footer">
+                            <span>Con cariño</span>
+                            <span>♡</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     HOJA QUE SE ANIMA AL PASAR
+                ================================================== -->
+
+                <div
+                    id="turningPage"
+                    class="turning-page">
+
+                    <div class="turn-front">
+
+                        <div class="turn-content">
+
+                            <span id="turnNumber">
+                                03
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="turn-back">
+
+                        <div class="turn-content">
+
+                            <span>
+                                ❦
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             CONTROLES
+        ====================================================== -->
+
+        <div class="book-controls">
+
+            <button
+                id="prevBtn"
+                class="control-button"
+                type="button">
+
+                <span>←</span>
+                Anterior
+
+            </button>
+
+
+            <div class="page-counter">
+
+                <span id="currentPage">
+                    1
+                </span>
+
+                <span>
+                    /
+                </span>
+
+                <span id="totalPages">
+                    8
+                </span>
+
+            </div>
+
+
+            <button
+                id="nextBtn"
+                class="control-button"
+                type="button">
+
+                Siguiente
+                <span>→</span>
+
+            </button>
+
+        </div>
+
+
+        <p class="book-hint">
+            Puedes pasar las páginas para continuar...
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL
+    ====================================================== -->
+
+    <section
+        id="final"
+        class="final-screen oculto">
+
+        <div class="final-card">
+
+            <div class="final-symbol">
+                ❦
+            </div>
+
+            <p class="final-small">
+                Y si llegaste hasta aquí...
+            </p>
+
+            <h1>
+                todavía queda algo por decirte
+            </h1>
+
+            <div class="final-line"></div>
+
+            <p class="final-message">
+
+                Gracias por formar parte de mi vida,
+                por todos los momentos que hemos
+                compartido y por todos aquellos que
+                todavía nos quedan por vivir.
+
+                <br><br>
+
+                Nuestra historia no empezó siendo
+                una historia de amor.
+
+                <br><br>
+
+                Primero fuimos dos personas que
+                coincidieron, después amigos,
+                después volvimos a encontrarnos...
+
+                <br><br>
+
+                Y ahora tenemos nuestra propia historia.
+
+            </p>
+
+
+            <div class="final-love">
+
+                TE AMO MUCHO
+
+                <br>
+
+                <span>♡</span>
+
+            </div>
+
+
+            <div class="final-signature">
+
+                — Josue
+
+            </div>
+
+
+            <button
+                id="restartBtn"
+                class="restart-button"
+                type="button">
+
+                ↻ Volver a leer
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        src="script.js"
+        defer>
+    </script>
+
+</body>
+
+</html>
